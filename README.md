@@ -4,6 +4,8 @@
 
 This repository contains exercise codes from the book [Refactoring - Improving the Design of Existing Code](https://www.amazon.co.uk/Refactoring-Improving-Design-Existing-Technology/dp/0201485672). It will help you get started with the exercises in C# while reading the book.
 
+> Any fool can write a code that a computer can understand. Good programmers write code that humans can understand.
+
 ## Chapter 1:
 
 ### When to refactoring: 
@@ -17,3 +19,7 @@ It's easy to introduce bugs while making refactoring the existing code, so alway
 ### Video Store: Intial Class Diagram
 
 ![Class Diagram](./diagrams/VideoStoreInitialClassDiagram.png)
+
+### Refactoring Recipes
+
+* Always refactor the code in small steps so that when you make a mistake, it's easy to find the bug. to find the bug.
