@@ -28,12 +28,7 @@
 
             foreach (var aRental in _rentals)
             {
-                // add frequent renter points
-                frequentRenterPoints++;
-                // add bonus for a two day new release rental
-                if ((aRental.GetMovie().GetPriceCode() == Movie.NEW_RELEASE)
-                    &&
-                    aRental.GetDaysRented() > 1) frequentRenterPoints++;
+                frequentRenterPoints += aRental.GetFrequentRenterPoints();
                 //show figures for this rental
                 result += "\t" + aRental.GetMovie().GetTitle() + "\t" + aRental.GetCharge() + "\n";
                 totalAmount += aRental.GetCharge();
