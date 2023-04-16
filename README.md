@@ -22,4 +22,7 @@ It's easy to introduce bugs while making refactoring the existing code, so alway
 
 ### Refactoring Recipes
 
-* Always refactor the code in small steps so that when you make a mistake, it's easy to find the bug. to find the bug.
+Always refactor the code in small steps so that when you make a mistake, it's easy to find the bug. to find the bug.
+
+* Extract Method
+* Move Method

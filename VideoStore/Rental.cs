@@ -20,5 +20,28 @@
         {
             return _movie;
         }
+
+        public double GetCharge()
+        {
+            double result = 0;
+            switch (GetMovie().GetPriceCode())
+            {
+                case Movie.REGULAR:
+                    result += 2;
+                    if (GetDaysRented() > 2)
+                        result += (GetDaysRented() - 2) * 1.5;
+                    break;
+                case Movie.NEW_RELEASE:
+                    result += GetDaysRented() * 3;
+                    break;
+                case Movie.CHILDRENS:
+                    result += 1.5;
+                    if (GetDaysRented() > 3)
+                        result += (GetDaysRented() - 3) * 1.5;
+                    break;
+            }
+
+            return result;
+        }
     }
 }
