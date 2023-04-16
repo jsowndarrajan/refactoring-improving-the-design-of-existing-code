@@ -26,3 +26,4 @@ Always refactor the code in small steps so that when you make a mistake, it's ea
 
 * Extract Method
 * Move Method
+* Replace Temp with Query
