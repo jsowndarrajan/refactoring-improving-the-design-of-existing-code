@@ -32,7 +32,7 @@
 
             //add footer lines
             result += "Amount owed is " + GetTotalCharge() + "\n";
-            result += "You earned " + GetFrequentRenterPoints() + " frequent renter points";
+            result += "You earned " + GetTotalFrequentRenterPoints() + " frequent renter points";
             return result;
         }
 
@@ -46,7 +46,7 @@
             return result;
         }
 
-        private double GetFrequentRenterPoints()
+        private double GetTotalFrequentRenterPoints()
         {
             double result = 0;
             foreach (var aRental in _rentals)
