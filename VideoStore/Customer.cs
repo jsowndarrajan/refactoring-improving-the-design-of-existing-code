@@ -36,6 +36,18 @@
             return result;
         }
 
+        public string HtmlStatement()
+        {
+            var result = "<h1>Rentals for <b>" + GetName() + "</b></h1><p>\n";
+            foreach (var rental in _rentals)
+            {
+                result += rental.GetMovie().GetTitle() + ": " + rental.GetCharge() + "<br/>\n";
+            }
+            result += "<p>You owe <b>" + GetTotalCharge() + "</b></p>\n";
+            result += "On this rental you earned <b>" + GetTotalFrequentRenterPoints() + "</b> frequent renter points</p>";
+            return result;
+        }
+
         private double GetTotalCharge()
         {
             double result = 0;
