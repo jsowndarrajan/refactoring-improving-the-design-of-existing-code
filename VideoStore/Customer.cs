@@ -22,7 +22,6 @@
 
         public string Statement()
         {
-            double totalAmount = 0;
             var frequentRenterPoints = 0;
             var result = "Rental Record for " + GetName() + "\n";
 
@@ -31,12 +30,21 @@
                 frequentRenterPoints += aRental.GetFrequentRenterPoints();
                 //show figures for this rental
                 result += "\t" + aRental.GetMovie().GetTitle() + "\t" + aRental.GetCharge() + "\n";
-                totalAmount += aRental.GetCharge();
             }
 
             //add footer lines
-            result += "Amount owed is " + totalAmount + "\n";
+            result += "Amount owed is " + GetTotalCharge() + "\n";
             result += "You earned " + frequentRenterPoints + " frequent renter points";
+            return result;
+        }
+
+        private double GetTotalCharge()
+        {
+            double result = 0;
+            foreach (var aRental in _rentals)
+            {
+                result += aRental.GetCharge();
+            }
             return result;
         }
     }
