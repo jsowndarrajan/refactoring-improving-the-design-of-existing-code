@@ -6,13 +6,13 @@ This repository contains exercise codes from the book [Refactoring - Improving t
 
 > Any fool can write a code that a computer can understand. Good programmers write code that humans can understand.
 
-## Chapter 1:
+## Chapter 1
 
-### When to refactoring: 
+### When to refactoring
 
 You have a requirement to make changes on the exiting code, but the code is not structured and easy to add new features. In such scenarios, first refactor the code to add the new feature, then add new feature.
 
-### First step of refactoring:
+### First step of refactoring
 
 It's easy to introduce bugs while making refactoring the existing code, so always ensure that the exiting code covered with solid testcases so that it will indicate the issues immediatly when we introduce defects.
 
@@ -28,3 +28,9 @@ Always refactor the code in small steps so that when you make a mistake, it's ea
 * Move Method
 * Replace Temp with Query
 * Replace Conditional with Polymorphism
+
+## Principles in Refactoring
+
+> Refactoring (noun): a change made to the internal structure of software to make it easier to understand and cheaper to modify without changing its observable behavior.
+
+> Refactor (verb): to restrucure the program by applying a serious of refactoring without changing its observable behavior. 
