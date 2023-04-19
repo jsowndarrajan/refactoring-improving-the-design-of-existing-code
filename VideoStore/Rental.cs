@@ -23,7 +23,7 @@ public class Rental
 
     public double GetCharge()
     {
-        return _movie.Price.GetCharge(_daysRented);
+        return _movie.GetCharge(_daysRented);
     }
 
     public int GetFrequentRenterPoints()
